@@ -1,0 +1,22 @@
+.header {
+    position: relative;
+}
+
+.image {
+    position: relative;
+    width: 50%;
+}
+
+.slogan {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+.circle {
+    margin-bottom: 7px;
+}

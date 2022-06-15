@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.header {
+  padding: 10px 40px;
+  background: $backgroundColor;
+  color: $primaryColor;
+  font-family: $primaryFont;
+  font-size: 25px;
+  font-weight: 500;
+}
