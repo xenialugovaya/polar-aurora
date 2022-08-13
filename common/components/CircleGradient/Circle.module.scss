@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.circle {
+  border-radius: 50%;
+  background: $primaryGradient;
+  height: 17px;
+  width: 17px;
+}
