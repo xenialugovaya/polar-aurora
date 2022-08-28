@@ -1,10 +1,35 @@
 @import '../../styles/variables.scss';
 
 .header {
-  padding: 10px 40px;
-  background: $backgroundColor;
-  color: $primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 40px;
+  // background: $backgroundColor;
   font-family: $primaryFont;
-  font-size: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $primaryColor;
+  font-size: 30px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.icon {
+  color: $secondaryColor;
+  margin-right: 10px;
+}
+
+.button {
+  background: $primaryGradient;
+  color: $headersColor;
+}
+
+.contacts {
+  display: block;
+  color: $textColor;
+  margin-right: 30px;
 }

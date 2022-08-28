@@ -6,7 +6,9 @@ body {
   color: #64748B;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #334155;
   margin: 0;
   padding: 0;
