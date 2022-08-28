@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 40px;
+  font-family: $primaryFont;
+}
