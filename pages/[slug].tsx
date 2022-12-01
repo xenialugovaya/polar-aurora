@@ -1,9 +1,9 @@
 import { Grid, Paper } from "@mui/material";
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 
 import { MainLayout } from "../layouts/MainLayout";
-import { getPostBySlug } from "../lib/api";
+import { getAllPosts, getPostBySlug } from "../lib/api";
 import { Post } from "../lib/types";
 import styles from "../styles/Tour.module.scss";
 
@@ -33,10 +33,19 @@ const Tour: NextPage<TourProps> = ({ post }) => {
 
 export default Tour;
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     const post = await getPostBySlug(params?.slug as string);
 
     return {
         props: { post },
+    }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const allPosts = await getAllPosts()
+
+    return {
+        paths: allPosts.map(({ node }) => `/${node.slug}`) || [],
+        fallback: true,
     }
 }
