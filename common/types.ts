@@ -9,3 +9,8 @@ export interface NodeGQL<T> {
 export interface Edges<T> {
     edges: T;
 }
+
+export interface MenuItem {
+    name: string;
+    slug: string;
+}

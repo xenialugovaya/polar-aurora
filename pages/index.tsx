@@ -11,10 +11,10 @@ import styles from "../styles/Home.module.scss";
 import mainImage from "../public/main.jpeg";
 import mainImage1 from "../public/main1.jpeg";
 
-import { getAllPosts } from "./api/post";
 import { Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tab, Tabs } from "@mui/material";
 import { NodeGQL } from "../common/types";
-import { Post } from "./api/types";
+import { Post } from "../lib/types";
+import { getAllPosts } from "../lib/api";
 
 interface HomeProps {
   posts: NodeGQL<Post>[];
@@ -27,11 +27,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
   // const featuredPosts = posts.edges.filter(post => getPostCategoriesIds(post).some(catId => categoriesIds.includes(catId)));
 
-  console.log("posts", posts);
+  // console.log("posts", posts);
   return (
     <MainLayout title="Туры в Карелию">
       <Grid container spacing={4}>
-        <Grid item xs={6}>
+        <Grid item xs={8}>
           <Image src={mainImage} alt="Туры в Карелию" style={{ borderRadius: 10 }} />
         </Grid>
         <Grid item xs={4}>
