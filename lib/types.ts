@@ -1,4 +1,4 @@
-import { Nodes } from "../../common/types";
+import { Nodes } from "../common/types";
 
 export interface Post {
     id: string;
