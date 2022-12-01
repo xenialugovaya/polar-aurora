@@ -68,8 +68,9 @@ export async function getAllPosts(): Promise<NodeGQL<Post>[]> {
   return data?.posts?.edges;
 }
 
+
 export async function getPostBySlug(slug: string): Promise<Post> {
-  const data = await fetchAPI(`
+    const data = await fetchAPI(`
   {
     posts(where: {name: "${slug}"}) {
       edges {
@@ -97,7 +98,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 }
 
 export async function getAllCategories(): Promise<Nodes<Category>[]> {
-  const data = await fetchAPI(`
+    const data = await fetchAPI(`
     {
       categories(first: 1000) {
         nodes {
